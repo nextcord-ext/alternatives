@@ -21,10 +21,13 @@
 
 .. raw:: html
 
-    <h1 align="center">discord-ext-alternatives</h1>
-    <p align="center">A discord.py extension with additional and alternative features.</p>
-    <h6 align="center">Copyright 2020-present Ext-Creators</h6>
+    <h1 align="center">nextcord-ext-alternatives</h1>
+    <p align="center">A nextcord extension with additional and alternative features.</p>
+    <h6 align="center">Copyright 2020-present Ext-Creators And Copyright 2021-present VincentRPS</h6>
 
+Fork
+-----
+This is a maintained fork of discord-ext-alternatives
 
 Installation
 ------------
