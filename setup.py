@@ -23,6 +23,9 @@ classifiers = [
 
 with open("requirements.txt") as stream:
     install_requires = stream.read().splitlines()
+    
+with open("README.rst", encoding="utf-8") as f:
+    readme = f.read()  
 
 packages = [
     "nextcord.ext.alternatives",
@@ -60,6 +63,7 @@ setuptools.setup(
     author="nextcord-ext",
     classifiers=classifiers,
     description="A nextcord extension with additional and alternative features, Forked from discord-ext-alternatives",
+    long_description=readme,
     install_requires=install_requires,
     license="Apache Software License",
     name="nextcord-ext-alternatives",
