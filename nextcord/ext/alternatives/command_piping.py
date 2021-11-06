@@ -13,7 +13,7 @@ async def foo(ctx):
 'world!'
 """
 
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 async def invoke(self, ctx):

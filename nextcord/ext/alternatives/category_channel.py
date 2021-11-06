@@ -24,7 +24,7 @@ async def shuffle(ctx):
 
 import random
 
-from discord import CategoryChannel
+from nextcord import CategoryChannel
 
 
 async def _sort(self, *, key=None, reverse=False):
@@ -32,7 +32,7 @@ async def _sort(self, *, key=None, reverse=False):
 
     Sorts the channels within the CategoryChannel, similar to Python's list.sort().
 
-    You must have the :attr:`~discord.Permissions.manage_channels` permission to
+    You must have the :attr:`~nextcord.Permissions.manage_channels` permission to
     do this.
 
     Parameters
@@ -63,7 +63,7 @@ async def _alphabetize(self, *, reverse=False):
 
     Alphabetizes the channels within the CategoryChannel.
 
-    You must have the :attr:`~discord.Permissions.manage_channels` permission to
+    You must have the :attr:`~nextcord.Permissions.manage_channels` permission to
     do this.
 
     Parameters
@@ -87,7 +87,7 @@ async def _shuffle(self):
 
     Shuffles the channels within the CategoryChannel.
 
-    You must have the :attr:`~discord.Permissions.manage_channels` permission to
+    You must have the :attr:`~nextcord.Permissions.manage_channels` permission to
     do this.
 
     Raises

@@ -8,7 +8,7 @@ channel = ctx.guild.text_channels[1]
 await webhook.move_to(channel=channel)
 ```
 """
-from discord import utils, errors, webhook, TextChannel
+from nextcord import utils, errors, webhook, TextChannel
 import asyncio
 import json
 import aiohttp

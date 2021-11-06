@@ -28,8 +28,8 @@ async def no(ctx):
 
 import inspect
 
-from discord.ext import commands
-from discord.ext.alternatives._common import py_allow
+from nextcord.ext import commands
+from nextcord.ext.alternatives._common import py_allow
 
 
 py_allow(3, 9, 0)

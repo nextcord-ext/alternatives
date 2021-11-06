@@ -13,13 +13,13 @@ async def test(ctx, image: Asset):
     await image.save(asset_bytes)
     do_some_cool_image_manipulation(asset_bytes)
 
-    await ctx.send(file=discord.File(asset_bytes, 'cool_image.png'))
+    await ctx.send(file=nextcord.File(asset_bytes, 'cool_image.png'))
 ```
 """
 
-from discord.ext.commands import converter, Context, errors, Command
+from nextcord.ext.commands import converter, Context, errors, Command
 from inspect import Parameter
-from discord import Asset, DiscordException
+from nextcord import Asset, nextcordException
 import typing
 
 from ._common import _ALL
@@ -46,10 +46,10 @@ Asset.__str__ = (
 
 async def _read(self):
     if not self._url:
-        raise DiscordException("Invalid asset (no URL provided)")
+        raise nextcordException("Invalid asset (no URL provided)")
 
     if self._state is None:
-        raise DiscordException("Invalid state (no ConnectionState provided)")
+        raise nextcordException("Invalid state (no ConnectionState provided)")
 
     return await self._state.http.get_from_cdn(str(self))
 

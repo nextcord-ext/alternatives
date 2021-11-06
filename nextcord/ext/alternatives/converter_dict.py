@@ -22,9 +22,9 @@ async def yert(ctx, yert: Yert):
 """
 from types import FunctionType
 
-import discord
-from discord.ext import commands
-from discord.ext.commands import converter, Command
+import nextcord
+from nextcord.ext import commands
+from nextcord.ext.commands import converter, Command
 
 from ._common import _ALL
 
@@ -37,18 +37,18 @@ _BUILTINS = (
 
 _CONVERTERS = {
     # fmt: off
-    discord.CategoryChannel: converter.CategoryChannelConverter,
-    discord.Colour:          converter.ColourConverter,
-    discord.Emoji:           converter.EmojiConverter,
-    discord.Game:            converter.GameConverter,
-    discord.Invite:          converter.InviteConverter,
-    discord.Member:          converter.MemberConverter,
-    discord.Message:         converter.MessageConverter,
-    discord.PartialEmoji:    converter.PartialEmojiConverter,
-    discord.Role:            converter.RoleConverter,
-    discord.TextChannel:     converter.TextChannelConverter,
-    discord.User:            converter.UserConverter,
-    discord.VoiceChannel:    converter.VoiceChannelConverter,
+    nextcord.CategoryChannel: converter.CategoryChannelConverter,
+    nextcord.Colour:          converter.ColourConverter,
+    nextcord.Emoji:           converter.EmojiConverter,
+    nextcord.Game:            converter.GameConverter,
+    nextcord.Invite:          converter.InviteConverter,
+    nextcord.Member:          converter.MemberConverter,
+    nextcord.Message:         converter.MessageConverter,
+    nextcord.PartialEmoji:    converter.PartialEmojiConverter,
+    nextcord.Role:            converter.RoleConverter,
+    nextcord.TextChannel:     converter.TextChannelConverter,
+    nextcord.User:            converter.UserConverter,
+    nextcord.VoiceChannel:    converter.VoiceChannelConverter,
     # fmt: on
 }
 

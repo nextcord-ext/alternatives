@@ -34,7 +34,7 @@ Installation
 
 .. code-block:: sh
 
-    pip install --upgrade discord-ext-alternatives
+    pip install --upgrade nextcord-ext-alternatives
 
 
 Usage
@@ -42,7 +42,7 @@ Usage
 
 .. code-block:: py
 
-    from discord.ext.alternatives import asset_converter, message_eq
-    # Patches the related features into discord.py
+    from nextcord.ext.alternatives import asset_converter, message_eq
+    # Patches the related features into nextcord
     # OR
-    from discord.ext.alternatives.class_commands import ClassGroup, Config
+    from nextcord.ext.alternatives.class_commands import ClassGroup, Config

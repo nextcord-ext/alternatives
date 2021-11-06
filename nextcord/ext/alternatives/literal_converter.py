@@ -1,6 +1,6 @@
 from typing import Literal, get_args, get_origin
-from discord.ext.commands import Command
-from discord.ext.commands.errors import ConversionError, BadArgument
+from nextcord.ext.commands import Command
+from nextcord.ext.commands.errors import ConversionError, BadArgument
 
 _old_actual_conversion = Command._actual_conversion
 

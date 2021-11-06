@@ -1,4 +1,4 @@
-from discord.colour import Colour
+from nextcord.colour import Colour
 
 
 MDIO_COLOURS = {

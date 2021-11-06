@@ -35,8 +35,8 @@ async def hello(ctx):
 
 import collections
 
-import discord
-from discord.ext import commands
+import nextcord
+from nextcord.ext import commands
 
 
 def _suffix_used(suffix, content):
@@ -89,7 +89,7 @@ class BotBase(commands.bot.BotBase):
         with the message as a context.
         Parameters
         -----------
-        message: :class:`discord.Message`
+        message: :class:`nextcord.Message`
             The message context to get the prefix of.
         Returns
         --------
@@ -102,7 +102,7 @@ class BotBase(commands.bot.BotBase):
 
         suffix = ret = self.command_suffix
         if callable(suffix):
-            ret = await discord.utils.maybe_coroutine(suffix, self, message)
+            ret = await nextcord.utils.maybe_coroutine(suffix, self, message)
 
         if not isinstance(ret, str):
             try:
@@ -141,7 +141,7 @@ class BotBase(commands.bot.BotBase):
             else:
                 try:
                     if message.content.startswith(tuple(prefix)):
-                        invoked_prefix = discord.utils.find(view.skip_string, prefix)
+                        invoked_prefix = nextcord.utils.find(view.skip_string, prefix)
                 except TypeError:
                     if not isinstance(prefix, list):
                         raise TypeError(

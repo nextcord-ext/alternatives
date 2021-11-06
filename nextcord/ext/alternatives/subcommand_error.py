@@ -22,7 +22,7 @@ async def color(ctx):
 ```
 """
 
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 async def dispatch_error(self, ctx, error):

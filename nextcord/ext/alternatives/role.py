@@ -2,8 +2,8 @@
 you can pass Member objects (or IDs) to spare those members from having the role shaved.
 """
 
-from discord import Role
-from discord.abc import Snowflake
+from nextcord import Role
+from nextcord.abc import Snowflake
 from typing import Union, Optional
 
 

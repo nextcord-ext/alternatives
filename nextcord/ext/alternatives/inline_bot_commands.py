@@ -2,8 +2,8 @@
 
 Example:
 ```py
-from discord.ext.alternatives import inline_bot_commands
-from discord.ext import commands
+from nextcord.ext.alternatives import inline_bot_commands
+from nextcord.ext import commands
 
 class MyBot(commands.Bot):
     @commands.command()
@@ -20,7 +20,7 @@ bot.run(token)
 ```
 """
 
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 class InlineMeta(type):

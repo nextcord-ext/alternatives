@@ -10,7 +10,7 @@ async def on_message(message):
 ```
 """
 
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 def send_help(self, message, *args, **kwargs):

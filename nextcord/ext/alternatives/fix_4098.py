@@ -1,16 +1,16 @@
 """
-See https://github.com/Rapptz/discord.py/issues/4098.
+See https://github.com/Rapptz/nextcord.py/issues/4098.
 """
 import asyncio
-from discord import Role, ChannelType, InvalidArgument, PermissionOverwrite
-import discord.abc
+from nextcord import Role, ChannelType, InvalidArgument, PermissionOverwrite
+import nextcord.abc
 
 
 async def _edit(self, options, reason):
     try:
         parent = options.pop("category")
     except KeyError:
-        parent_id = discord.abc._undefined
+        parent_id = nextcord.abc._undefined
     else:
         parent_id = parent and parent.id
     try:
@@ -21,7 +21,7 @@ async def _edit(self, options, reason):
     try:
         position = options.pop("position")
     except KeyError:
-        if parent_id is not discord.abc._undefined:
+        if parent_id is not nextcord.abc._undefined:
             if lock_permissions:
                 category = self.guild.get_channel(parent_id)
                 options["permission_overwrites"] = [c._asdict() for c in category._overwrites]
@@ -66,7 +66,7 @@ async def _edit(self, options, reason):
 
     if options:
         data = await self._state.http.edit_channel(self.id, reason=reason, **options)
-        # see issue Rapptz/discord.py#4098
+        # see issue Rapptz/nextcord.py#4098
         if "parent_id" in options:
             client = self._state._get_client()
             try:
@@ -82,4 +82,4 @@ async def _edit(self, options, reason):
         self._update(self.guild, data)
 
 
-discord.abc.GuildChannel._edit = _edit
+nextcord.abc.GuildChannel._edit = _edit

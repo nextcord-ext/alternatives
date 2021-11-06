@@ -18,7 +18,7 @@ async def handle(ctx, error):
 
 import asyncio
 
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 async def on_error(*args):  # cog?, ctx, error

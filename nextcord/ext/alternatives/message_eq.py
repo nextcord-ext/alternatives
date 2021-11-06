@@ -12,7 +12,7 @@ False # Different IDs
 ```
 """
 
-import discord
+import nextcord
 
 
-discord.Message.__eq__ = lambda s, o: isinstance(o, discord.Message) and s.id == o.id
+nextcord.Message.__eq__ = lambda s, o: isinstance(o, nextcord.Message) and s.id == o.id

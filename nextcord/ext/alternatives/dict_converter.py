@@ -13,7 +13,7 @@ Example:
 import typing
 
 @bot.command()
-async def ban(ctx, **users_reasons_mapping: typing.Dict[discord.Member, str]):
+async def ban(ctx, **users_reasons_mapping: typing.Dict[nextcord.Member, str]):
     for (member, reason) in users_reasons_mapping['users_reasons_mapping'].items():  # this is necessary unfortunately
         await member.ban(reason=reason)
     await ctx.send(f'Banned {len(users_reasons_mapping["users_reasons_mapping"])} members')
@@ -23,8 +23,8 @@ async def ban(ctx, **users_reasons_mapping: typing.Dict[discord.Member, str]):
 import inspect
 from typing import Dict
 
-import discord
-from discord.ext.commands import Command, TooManyArguments, view as _view
+import nextcord
+from nextcord.ext.commands import Command, TooManyArguments, view as _view
 
 
 class DictStringView(_view.StringView):
@@ -112,14 +112,14 @@ async def _parse_arguments(self, ctx):
             next(iterator)
         except StopIteration:
             fmt = 'Callback for {0.name} command is missing "self" parameter.'
-            raise discord.ClientException(fmt.format(self))
+            raise nextcord.ClientException(fmt.format(self))
 
     # next we have the 'ctx' as the next parameter
     try:
         next(iterator)
     except StopIteration:
         fmt = 'Callback for {0.name} command is missing "ctx" parameter.'
-        raise discord.ClientException(fmt.format(self))
+        raise nextcord.ClientException(fmt.format(self))
 
     for name, param in iterator:
         if param.kind == param.POSITIONAL_OR_KEYWORD:

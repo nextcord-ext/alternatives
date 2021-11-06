@@ -33,7 +33,7 @@ class A(Config, invoke_without_command=True): # A group command
 
 import inspect
 
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 class ClassGroup(commands.Group):

@@ -25,17 +25,17 @@ with open("requirements.txt") as stream:
     install_requires = stream.read().splitlines()
 
 packages = [
-    "discord.ext.alternatives",
+    "nextcord.ext.alternatives",
 ]
 
 project_urls = {
-    "Issue Tracker": "https://github.com/Ext-Creators/discord-ext-alternatives/issues",
-    "Source": "https://github.com/Ext-Creators/discord-ext-alternatives",
+    "Issue Tracker": "https://github.com/nextcord-ext/alternatives/issues",
+    "Source": "https://github.com/nextcord-ext/alternatives",
 }
 
 _version_regex = r"^version = ('|\")((?:[0-9]+\.)*[0-9]+(?:\.?([a-z]+)(?:\.?[0-9])?)?)\1$"
 
-with open("discord/ext/alternatives/__init__.py") as stream:
+with open("nextcord/ext/alternatives/__init__.py") as stream:
     match = re.search(_version_regex, stream.read(), re.MULTILINE)
 
 version = match.group(2)
@@ -57,14 +57,14 @@ if match.group(3) is not None:
         pass
 
 setuptools.setup(
-    author="Ext-Creators",
+    author="nextcord-ext",
     classifiers=classifiers,
-    description="A discord.py extension with additional and alternative features.",
+    description="A nextcord extension with additional and alternative features, Forked from discord-ext-alternatives",
     install_requires=install_requires,
     license="Apache Software License",
-    name="discord-ext-alternatives",
+    name="nextcord-ext-alternatives",
     packages=packages,
     project_urls=project_urls,
-    url="https://github.com/Ext-Creators/discord-ext-alternatives",
+    url="https://github.com/nextcord/alternatives",
     version=version,
 )

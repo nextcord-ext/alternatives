@@ -9,8 +9,8 @@ async def test(ctx, server: Guild):
 ```
 """
 
-from discord.ext.commands import BadArgument, converter, Context
-from discord import Guild, utils
+from nextcord.ext.commands import BadArgument, converter, Context
+from nextcord import Guild, utils
 
 from ._common import _ALL
 

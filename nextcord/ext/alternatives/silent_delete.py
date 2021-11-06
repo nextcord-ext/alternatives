@@ -5,10 +5,10 @@ It uses a keyword argument called `silent`, and is by default
 ``False``.
 """
 
-import discord
+import nextcord
 
 
-_old_delete = discord.Message.delete
+_old_delete = nextcord.Message.delete
 
 
 async def delete(self, *, silent=False, **kwargs):
@@ -19,4 +19,4 @@ async def delete(self, *, silent=False, **kwargs):
             raise e
 
 
-discord.Message.delete = delete
+nextcord.Message.delete = delete

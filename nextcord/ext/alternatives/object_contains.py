@@ -14,7 +14,7 @@
     limitations under the License.
 """
 
-"""An experiment that allows `x in y` syntax for various discord objects.
+"""An experiment that allows `x in y` syntax for various nextcord objects.
 
 Example:
 ```py
@@ -26,19 +26,19 @@ member in role
 ```
 """
 
-import discord
-from discord.channel import CategoryChannel, DMChannel, TextChannel
+import nextcord
+from nextcord.channel import CategoryChannel, DMChannel, TextChannel
 
-if discord.version_info < (1, 7, 0):
-    from discord.channel import VoiceChannel as VocalGuildChannel
+if nextcord.version_info < (1, 7, 0):
+    from nextcord.channel import VoiceChannel as VocalGuildChannel
 else:
-    from discord.channel import VocalGuildChannel
+    from nextcord.channel import VocalGuildChannel
 
-from discord.guild import Guild
-from discord.member import Member
-from discord.message import Message
-from discord.role import Role
-from discord.user import User, BaseUser
+from nextcord.guild import Guild
+from nextcord.member import Member
+from nextcord.message import Message
+from nextcord.role import Role
+from nextcord.user import User, BaseUser
 
 
 def _Guild__contains__(self, item):
