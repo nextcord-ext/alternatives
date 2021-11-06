@@ -69,6 +69,6 @@ setuptools.setup(
     name="nextcord-ext-alternatives",
     packages=packages,
     project_urls=project_urls,
-    url="https://github.com/nextcord/alternatives",
+    url="https://github.com/nextcord-ext/alternatives",
     version=version,
 )
