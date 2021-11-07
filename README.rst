@@ -34,7 +34,7 @@ Installation
 
 .. code-block:: sh
 
-    pip install --upgrade nextcord-ext-alternatives
+    pip install --upgrade n-ext[alternatives]
 
 
 Usage
